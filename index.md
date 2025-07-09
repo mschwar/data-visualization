@@ -1,4 +1,4 @@
-# Data Visualization: A Comprehensive Heatmap of Oral Health in the Tsimane Population
+# A Comprehensive Heatmap of Oral Health in the Tsimane Population
 
 ![Tsimane Oral Health Heatmap](oral-health-heatmap.png)
 *A heatmap visualization of oral health status across 28 permanent teeth for 1,176 individuals (543 men, 633 women), sorted and grouped by age.*
