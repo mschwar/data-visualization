@@ -1,2 +1,3 @@
-# NOTE: using built-in Minima (simpler than remote_theme)
 theme: minima
+title: Matthew Schwartz | Data Visualization
+description: A showcase of data analysis and visualization projects.
