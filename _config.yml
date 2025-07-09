@@ -1,3 +1,4 @@
-theme: jekyll-theme-primer
-title: Data Visualization
-description: A showcase of data analysis and visualization projects.
+remote_theme: jekyll/minima
+plugins: [jekyll-remote-theme]
+
+
