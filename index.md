@@ -3,9 +3,9 @@
 
 ## Overview of the Visualization
 
-The figure you created is a heat map that visually represents the oral health status of the Tsimane population. This innovative visualization technique effectively communicates complex data in an intuitive and comprehensive manner.
+This figure visually represents the oral health status of the Tsimane population.
 
-Key features of the heat map:
+Key features:
 
 1. X-axis: Represents different teeth (incisors, canines, premolars, molars)
 2. Y-axis: Represents age groups, ranging from 15-24 to 75+
