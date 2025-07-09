@@ -1,7 +1,7 @@
 
 # Data Visualization: A Comprehensive Heatmap of Oral Health in the Tsimane Population
 
-![alt text](./Figure2-Teeth_v4.1.pdf)
+![alt text](./oral-health-heatmap.png)
 
 *A heatmap visualization of oral health status across 28 permanent teeth for 1,176 individuals (543 men, 633 women), sorted by age.*
 
@@ -17,9 +17,6 @@ The solution is a multi-panel heatmap that organizes the data along several clea
 - Tooth Type (X-axis): The horizontal axis represents all 28 permanent teeth (excluding third molars), grouped by type: incisors, canines, premolars, and molars.
 - Individuals & Age (Y-axis): Each horizontal line represents a single individual. Participants are sorted and grouped by age, from 15-24 to 75+, clearly illustrating the progression of oral health over a lifetime.
 - Health Status (Color Scale): A 5-point ordinal color scale indicates the health of each tooth, from Healthy (blue) to Missing (dark red), providing an at-a-glance measure of disease severity.
-
-
-
 
 ## Key Insights & Significance
 
