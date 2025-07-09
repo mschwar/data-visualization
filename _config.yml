@@ -1,4 +1,2 @@
-remote_theme: jekyll/minima
-
-plugins:
-  - jekyll-remote-theme
+# NOTE: using built-in Minima (simpler than remote_theme)
+theme: minima
