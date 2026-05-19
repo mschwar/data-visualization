@@ -22,6 +22,9 @@ This repository is a small GitHub Pages static site that publishes a single oral
 
 ## QA Evidence
 
+- Provenance refinement branch QA passed on 2026-05-19: `docs/heatmap-provenance.md` clearly states that the raw/analysis-ready source dataset is not published, distinguishes PDF/figure-to-PNG regeneration from full data-to-figure regeneration, and documents the Windows/MiKTeX `pdftoppm` temp/log permission blocker.
+- `python scripts/validate_repo.py` passed on 2026-05-19 with only the known stale `README.CRAWL.md` warning.
+- `python -m compileall scripts` passed on 2026-05-19.
 - A local homepage QA snapshot passed `python scripts/check_homepage.py` and was then captured at desktop and mobile widths in a browser-rendered view.
 - The browser captures showed the heatmap image, page heading, and download link in the expected positions with no visible layout regressions.
 - Historical artifact governance passed non-UI QA: `python scripts/validate_repo.py`, Python script compilation, policy-doc discoverability checks, and `_config.yml` exclusion checks.
@@ -32,6 +35,7 @@ This repository is a small GitHub Pages static site that publishes a single oral
 | Command | Purpose | Result |
 | --- | --- | --- |
 | `python scripts/validate_repo.py` | Repo validation | Pass with warning about stale `README.CRAWL.md` |
+| `python -m compileall scripts` | Python syntax/import compilation check | Pass |
 | `python scripts/render_heatmap.py` | Heatmap rebuild | Currently blocked locally by Windows/MiKTeX `pdftoppm` temp/log permission errors |
 | `python scripts/check_homepage.py` | Homepage smoke test | Requires `_site/index.html` from a Jekyll build, or an explicit rendered HTML path or URL |
 | `Invoke-WebRequest https://mschwar.github.io/data-visualization/` | Live site verification | 200 OK |
@@ -69,6 +73,5 @@ The pinned build path is now committed in-repo, so local build instructions are 
 
 ## Immediate Next Moves
 
-1. QA the provenance refinement branch by confirming the provenance boundary is discoverable in README, CURRENT_STATE, and `docs/heatmap-provenance.md`.
-2. Track the follow-on fixes listed in [docs/agentic-first-buildout-plan.md](docs/agentic-first-buildout-plan.md).
-3. Keep historical artifacts documented in [docs/historical-artifacts.md](docs/historical-artifacts.md).
+1. Track the follow-on fixes listed in [docs/agentic-first-buildout-plan.md](docs/agentic-first-buildout-plan.md).
+2. Keep historical artifacts documented in [docs/historical-artifacts.md](docs/historical-artifacts.md).
