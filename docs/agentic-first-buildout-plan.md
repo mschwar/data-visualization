@@ -68,13 +68,15 @@ Start the remaining buildout here:
 
 ### 4. Provenance refinement
 
-- Status: next.
+- Status: merged to main.
 - Goal: tighten the provenance story around the source PDF, the published PNG, and any constraints on regeneration.
 - Merge boundary: documentation only.
 - Verification: non-UI link/file validation.
 - Why fourth: it depends on the regeneration path already being committed.
 
 ### 5. Deployment check or badge
+
+- Status: next in the main buildout sequence.
 
 - Goal: add a lightweight live-deploy indicator or a Pages verification step if the repo still needs one.
 - Merge boundary: CI/docs only.
@@ -87,6 +89,7 @@ These are known missing or non-working items discovered during repo audit. Keep 
 
 ### A. Homepage Smoke-Test Documentation Fix
 
+- Status: implemented on `feat/homepage-smoke-docs`; pending QA and merge.
 - Problem: `python scripts/check_homepage.py` fails on a fresh checkout until `_site/index.html` exists.
 - Fix: document that the command requires `bundle exec jekyll build` first, or pass an explicit rendered HTML path or live URL.
 - Verification: run `python scripts/check_homepage.py <rendered-html-or-url>`.
