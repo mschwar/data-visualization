@@ -16,6 +16,7 @@ This repository is a small GitHub Pages static site that publishes a single oral
 - The Jekyll config excludes `vendor/`, so the bundled gem tree is kept out of the public site build.
 - The validate workflow uses Node 24-compatible `actions/checkout@v6` and `actions/setup-python@v6`.
 - `README.CRAWL.md` is explicitly documented as a retained historical artifact in `docs/historical-artifacts.md`.
+- The heatmap provenance boundary is explicit: this repo supports PDF-to-PNG regeneration, but the raw source dataset is not published here.
 - A repo-local validation command now checks required files, local links, key config values, and tracked OS junk.
 - The live GitHub Pages deployment returned HTTP 200 and served the expected page content in this session.
 
@@ -68,6 +69,6 @@ The pinned build path is now committed in-repo, so local build instructions are 
 
 ## Immediate Next Moves
 
-1. Start provenance refinement from [docs/agentic-first-buildout-plan.md](docs/agentic-first-buildout-plan.md).
+1. QA the provenance refinement branch by confirming the provenance boundary is discoverable in README, CURRENT_STATE, and `docs/heatmap-provenance.md`.
 2. Track the follow-on fixes listed in [docs/agentic-first-buildout-plan.md](docs/agentic-first-buildout-plan.md).
 3. Keep historical artifacts documented in [docs/historical-artifacts.md](docs/historical-artifacts.md).

@@ -4,7 +4,7 @@ This repository showcases a data visualization project designed to represent the
 
 This is a small GitHub Pages static site. The repo currently publishes one primary page (`index.md`) and one primary visualization asset (`oral-health-heatmap.png`).
 
-The repo also pins a local GitHub Pages build path (`Gemfile` and `.ruby-version`) and keeps the committed source figure (`Figure2-Teeth_v4.1.pdf`) with a rebuild script in `scripts/render_heatmap.py`.
+The repo also pins a local GitHub Pages build path (`Gemfile` and `.ruby-version`) and keeps the committed source figure (`Figure2-Teeth_v4.1.pdf`) with a rebuild script in `scripts/render_heatmap.py`. The raw source dataset behind the figure is not published in this repository.
 
 For the branch/PR/QA loop used by future agents, see `docs/agentic-first-buildout-plan.md`.
 
@@ -84,6 +84,8 @@ python scripts/render_heatmap.py
 ```
 
 The heatmap PNG is regenerated from `Figure2-Teeth_v4.1.pdf` at 200 DPI. The rendered pixels match the published PNG; only PNG encoder metadata can differ.
+
+Current local caveat: on this Windows environment, the heatmap rebuild command is blocked by MiKTeX `pdftoppm` temp/log permission errors. See [`docs/heatmap-provenance.md`](docs/heatmap-provenance.md) for the exact provenance boundary and rebuild status.
 
 ## Publication Context
 

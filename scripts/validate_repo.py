@@ -143,6 +143,10 @@ def check_readme(warnings: list[str]) -> None:
         warnings.append("README.md does not document the historical artifact policy.")
     if "README.CRAWL.md" not in readme:
         warnings.append("README.md does not mention the retained historical crawl snapshot.")
+    if "raw source dataset" not in readme:
+        warnings.append("README.md does not document the unpublished raw source dataset boundary.")
+    if "MiKTeX" not in readme or "pdftoppm" not in readme:
+        warnings.append("README.md does not document the current Windows heatmap rebuild caveat.")
     crawl = ROOT / "README.CRAWL.md"
     if crawl.exists():
         crawl_text = crawl.read_text(encoding="utf-8")
@@ -150,6 +154,20 @@ def check_readme(warnings: list[str]) -> None:
             warnings.append(
                 "README.CRAWL.md contains a stale machine-local path and should not be treated as canonical repo documentation."
             )
+
+
+def check_provenance(errors: list[str]) -> None:
+    provenance = (ROOT / "docs" / "heatmap-provenance.md").read_text(encoding="utf-8")
+    required_phrases = [
+        "raw or analysis-ready source dataset",
+        "figure-to-PNG regeneration",
+        "not full data-to-figure regeneration",
+        "MiKTeX",
+        "pdftoppm",
+    ]
+    for phrase in required_phrases:
+        if phrase not in provenance:
+            errors.append(f"docs/heatmap-provenance.md should document `{phrase}`.")
 
 
 def main() -> int:
@@ -169,6 +187,7 @@ def main() -> int:
     check_config(errors)
     check_index(errors)
     check_local_links(errors)
+    check_provenance(errors)
     check_readme(warnings)
 
     if errors:
