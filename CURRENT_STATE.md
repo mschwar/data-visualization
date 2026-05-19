@@ -16,6 +16,11 @@ This repository is a small GitHub Pages static site that publishes a single oral
 - A repo-local validation command now checks required files, local links, key config values, and tracked OS junk.
 - The live GitHub Pages deployment returned HTTP 200 and served the expected page content in this session.
 
+## QA Evidence
+
+- A local homepage QA snapshot passed `python scripts/check_homepage.py` and was then captured at desktop and mobile widths in a browser-rendered view.
+- The browser captures showed the heatmap image, page heading, and download link in the expected positions with no visible layout regressions.
+
 ## Existing Commands
 
 | Command | Purpose | Result |
