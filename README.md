@@ -41,6 +41,12 @@ A 5-point color scale indicates the health status of each tooth, from healthy (b
 *   `scripts/render_heatmap.py`: Rebuild script for the published heatmap PNG.
 *   `scripts/check_homepage.py`: Smoke test for the rendered homepage HTML.
 *   `docs/heatmap-provenance.md`: Source artifact and rebuild notes.
+*   `docs/historical-artifacts.md`: Policy for retained historical snapshots.
+*   `README.CRAWL.md`: Historical crawl snapshot retained for auditability only.
+
+## Historical Artifacts
+
+`README.CRAWL.md` is kept as a historical artifact, not as canonical documentation. It is excluded from the public site, and the repo-level policy for retained snapshots lives in [`docs/historical-artifacts.md`](docs/historical-artifacts.md).
 
 ## Validate The Repo
 

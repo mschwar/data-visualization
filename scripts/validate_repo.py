@@ -17,6 +17,7 @@ TEXT_FILES = [
     ROOT / "AGENTS.md",
     ROOT / "docs" / "agentic-first-buildout-plan.md",
     ROOT / "docs" / "heatmap-provenance.md",
+    ROOT / "docs" / "historical-artifacts.md",
     ROOT / "docs" / "agentic-overhaul" / "2026-05-audit.md",
 ]
 REQUIRED_FILES = [
@@ -33,6 +34,7 @@ REQUIRED_FILES = [
     ROOT / "scripts" / "check_homepage.py",
     ROOT / "docs" / "agentic-first-buildout-plan.md",
     ROOT / "docs" / "heatmap-provenance.md",
+    ROOT / "docs" / "historical-artifacts.md",
     ROOT / "CURRENT_STATE.md",
     ROOT / "AGENTS.md",
     ROOT / "docs" / "agentic-overhaul" / "2026-05-audit.md",
@@ -137,6 +139,10 @@ def check_readme(warnings: list[str]) -> None:
         warnings.append("README.md does not document the homepage smoke test command.")
     if "Figure2-Teeth_v4.1.pdf" not in readme:
         warnings.append("README.md does not mention the committed heatmap source PDF.")
+    if "docs/historical-artifacts.md" not in readme:
+        warnings.append("README.md does not document the historical artifact policy.")
+    if "README.CRAWL.md" not in readme:
+        warnings.append("README.md does not mention the retained historical crawl snapshot.")
     crawl = ROOT / "README.CRAWL.md"
     if crawl.exists():
         crawl_text = crawl.read_text(encoding="utf-8")

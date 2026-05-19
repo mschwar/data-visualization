@@ -15,6 +15,7 @@ This repository is a small GitHub Pages static site that publishes a single oral
 - `scripts/check_homepage.py` provides a non-UI smoke test for the rendered homepage.
 - The Jekyll config excludes `vendor/`, so the bundled gem tree is kept out of the public site build.
 - The validate workflow uses Node 24-compatible `actions/checkout@v6` and `actions/setup-python@v6`.
+- `README.CRAWL.md` is explicitly documented as a retained historical artifact in `docs/historical-artifacts.md`.
 - A repo-local validation command now checks required files, local links, key config values, and tracked OS junk.
 - The live GitHub Pages deployment returned HTTP 200 and served the expected page content in this session.
 
@@ -64,6 +65,6 @@ The pinned build path is now committed in-repo, so local build instructions are 
 
 ## Immediate Next Moves
 
-1. Implement historical artifact governance in the next feature branch, focusing on the final treatment of `README.CRAWL.md` and any similar repo-only files.
+1. QA the historical artifact governance branch by confirming `README.CRAWL.md` stays out of the public site and the new policy doc stays discoverable.
 2. Keep `scripts/render_heatmap.py` and `Figure2-Teeth_v4.1.pdf` in sync if the figure changes.
 3. Run `python scripts/check_homepage.py` against `_site/index.html` after a local build if you need a homepage smoke check.

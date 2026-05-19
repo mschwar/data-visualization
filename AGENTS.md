@@ -18,6 +18,7 @@ Start with `CURRENT_STATE.md` for the current audit summary, then read `docs/age
 - `scripts/render_heatmap.py`: source-to-raster rebuild script
 - `scripts/check_homepage.py`: homepage smoke test script
 - `docs/heatmap-provenance.md`: provenance and rebuild notes
+- `docs/historical-artifacts.md`: policy for retained historical snapshots
 
 ## Commands To Run Before And After Changes
 
@@ -56,7 +57,7 @@ Hand-authored:
 
 Generated or historical artifact:
 
-- `README.CRAWL.md`: historical crawl output with stale machine-local metadata; do not treat as canonical truth
+- `README.CRAWL.md`: historical crawl output with stale machine-local metadata; see `docs/historical-artifacts.md`
 
 ## Data, Citation, And Provenance Rules
 
@@ -77,6 +78,7 @@ Generated or historical artifact:
 - Do not hand-edit generated artifacts if a real generator is introduced later.
 - Prefer edits that preserve GitHub Pages compatibility.
 - Avoid deleting historical artifacts unless their role is documented and the removal is clearly safe.
+- Keep retained historical snapshots documented in `docs/historical-artifacts.md`.
 
 ## Known Project-Specific Traps
 
