@@ -62,6 +62,6 @@ The pinned build path is now committed in-repo, so local build instructions are 
 
 ## Immediate Next Moves
 
-1. Follow [docs/agentic-first-buildout-plan.md](docs/agentic-first-buildout-plan.md) for the next feature branch.
+1. Implement the responsive polish pass in `feat/responsive-polish`, focusing on mobile and small-laptop typography and spacing without changing content.
 2. Keep `scripts/render_heatmap.py` and `Figure2-Teeth_v4.1.pdf` in sync if the figure changes.
 3. Run `python scripts/check_homepage.py` against `_site/index.html` after a local build if you need a homepage smoke check.
