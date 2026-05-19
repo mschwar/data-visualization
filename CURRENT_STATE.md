@@ -64,6 +64,6 @@ The pinned build path is now committed in-repo, so local build instructions are 
 
 ## Immediate Next Moves
 
-1. Implement the responsive polish pass in `feat/responsive-polish`, focusing on mobile and small-laptop typography and spacing without changing content.
+1. Implement historical artifact governance in the next feature branch, focusing on the final treatment of `README.CRAWL.md` and any similar repo-only files.
 2. Keep `scripts/render_heatmap.py` and `Figure2-Teeth_v4.1.pdf` in sync if the figure changes.
 3. Run `python scripts/check_homepage.py` against `_site/index.html` after a local build if you need a homepage smoke check.

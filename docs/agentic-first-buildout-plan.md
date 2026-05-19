@@ -44,6 +44,7 @@ Start the remaining buildout here:
 
 ### 1. Browser smoke test for the home page
 
+- Status: merged to main.
 - Goal: add a browser-driven verification path that opens the local site, checks the title, the main heatmap image, the download link, and the image alt text.
 - Merge boundary: the test harness and its docs only.
 - Verification: browser screenshot or a scripted browser run against the local preview.
@@ -51,6 +52,7 @@ Start the remaining buildout here:
 
 ### 2. Responsive polish pass
 
+- Status: merged to main.
 - Goal: harden the layout for mobile and small laptop widths without changing content.
 - Merge boundary: CSS and minimal markup only.
 - Verification: browser screenshots at desktop and mobile breakpoints.
@@ -58,6 +60,7 @@ Start the remaining buildout here:
 
 ### 3. Historical artifact governance
 
+- Status: next.
 - Goal: decide the final treatment of `README.CRAWL.md` and any other historical artifacts.
 - Merge boundary: docs and navigation only.
 - Verification: non-UI validation plus live site check that the artifact is not surfaced publicly.
