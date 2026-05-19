@@ -54,10 +54,23 @@ Run:
 
 ```bash
 python scripts/validate_repo.py
+```
+
+This checks for required files, obvious broken local references, key site metadata, and committed OS junk files.
+
+After rendering the site, run the homepage smoke test against the generated page:
+
+```bash
+bundle exec jekyll build
 python scripts/check_homepage.py
 ```
 
-This checks for required files, obvious broken local references, key site metadata, committed OS junk files, and the rendered homepage shape.
+You can also pass an explicit rendered HTML path or live URL:
+
+```bash
+python scripts/check_homepage.py _site/index.html
+python scripts/check_homepage.py https://mschwar.github.io/data-visualization/
+```
 
 ## Rebuild Locally
 

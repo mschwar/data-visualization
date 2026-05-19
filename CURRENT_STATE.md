@@ -23,14 +23,16 @@ This repository is a small GitHub Pages static site that publishes a single oral
 
 - A local homepage QA snapshot passed `python scripts/check_homepage.py` and was then captured at desktop and mobile widths in a browser-rendered view.
 - The browser captures showed the heatmap image, page heading, and download link in the expected positions with no visible layout regressions.
+- Historical artifact governance passed non-UI QA: `python scripts/validate_repo.py`, Python script compilation, policy-doc discoverability checks, and `_config.yml` exclusion checks.
+- Live GitHub Pages QA returned HTTP 200, found the expected title and heatmap, and did not find a `README.CRAWL.html` link.
 
 ## Existing Commands
 
 | Command | Purpose | Result |
 | --- | --- | --- |
 | `python scripts/validate_repo.py` | Repo validation | Pass with warning about stale `README.CRAWL.md` |
-| `python scripts/render_heatmap.py` | Heatmap rebuild | Produces the published 1700 x 2200 PNG from the committed PDF source at 200 DPI |
-| `python scripts/check_homepage.py` | Homepage smoke test | Verifies the rendered homepage title, heading, heatmap image, alt text, download link, and the absence of README.CRAWL.html |
+| `python scripts/render_heatmap.py` | Heatmap rebuild | Currently blocked locally by Windows/MiKTeX `pdftoppm` temp/log permission errors |
+| `python scripts/check_homepage.py` | Homepage smoke test | Requires `_site/index.html` from a Jekyll build, or an explicit rendered HTML path or URL |
 | `Invoke-WebRequest https://mschwar.github.io/data-visualization/` | Live site verification | 200 OK |
 | `bundle exec jekyll build` | Local Jekyll build | Not run in this environment because Ruby was unavailable at audit time |
 
@@ -60,11 +62,12 @@ The pinned build path is now committed in-repo, so local build instructions are 
 
 - Local GitHub Pages rendering is not reproducible from committed tooling in the current environment.
 - Local build execution still depends on having Ruby installed on the host.
+- Heatmap rebuild execution is currently blocked in this Windows environment by MiKTeX `pdftoppm` permission errors.
 - The historical source dataset that fed the original figure is still not published in this repo.
 - `README.CRAWL.md` remains as a historical artifact but is excluded from the public site.
 
 ## Immediate Next Moves
 
-1. QA the historical artifact governance branch by confirming `README.CRAWL.md` stays out of the public site and the new policy doc stays discoverable.
-2. Keep `scripts/render_heatmap.py` and `Figure2-Teeth_v4.1.pdf` in sync if the figure changes.
-3. Run `python scripts/check_homepage.py` against `_site/index.html` after a local build if you need a homepage smoke check.
+1. Start provenance refinement from [docs/agentic-first-buildout-plan.md](docs/agentic-first-buildout-plan.md).
+2. Track the follow-on fixes listed in [docs/agentic-first-buildout-plan.md](docs/agentic-first-buildout-plan.md).
+3. Keep historical artifacts documented in [docs/historical-artifacts.md](docs/historical-artifacts.md).
