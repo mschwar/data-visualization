@@ -1,3 +1,12 @@
 theme: minima
 title: Matthew Schwartz | Data Visualization
 description: A showcase of data analysis and visualization projects.
+exclude:
+  - AGENTS.md
+  - CURRENT_STATE.md
+  - Figure2-Teeth_v4.1.pdf
+  - Gemfile
+  - Gemfile.lock
+  - README.CRAWL.md
+  - docs/
+  - scripts/
