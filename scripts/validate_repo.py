@@ -85,6 +85,7 @@ def check_config(errors: list[str]) -> None:
         "README.CRAWL.md",
         "docs/",
         "scripts/",
+        "vendor/",
     ]:
         if entry not in config:
             errors.append(f"_config.yml should exclude repo-only artifact `{entry}` from the public site.")

@@ -10,3 +10,4 @@ exclude:
   - README.CRAWL.md
   - docs/
   - scripts/
+  - vendor/

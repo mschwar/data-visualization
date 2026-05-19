@@ -13,6 +13,8 @@ This repository is a small GitHub Pages static site that publishes a single oral
 - A committed `Gemfile` and `.ruby-version` pin the GitHub Pages toolchain for local builds.
 - `Figure2-Teeth_v4.1.pdf` and `scripts/render_heatmap.py` provide a reproducible source-to-raster path for `oral-health-heatmap.png`.
 - `scripts/check_homepage.py` provides a non-UI smoke test for the rendered homepage.
+- The Jekyll config excludes `vendor/`, so the bundled gem tree is kept out of the public site build.
+- The validate workflow uses Node 24-compatible `actions/checkout@v6` and `actions/setup-python@v6`.
 - A repo-local validation command now checks required files, local links, key config values, and tracked OS junk.
 - The live GitHub Pages deployment returned HTTP 200 and served the expected page content in this session.
 
